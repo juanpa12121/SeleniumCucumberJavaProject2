@@ -20,6 +20,7 @@ public class GoogleSteps {
 
     @And("^Click on the search button$")
     public void clickSearchButton(){
+        google.clickGoogleSearch();
     }
 
     @Then("^The results match the criteria$")
