@@ -22,7 +22,7 @@ public class BasePage {
         driver = new ChromeDriver(chromeOptions);
         //Se crea una espera(Wait) ya que al usar este objeto tendra espera de 10 seg
         //Ya que si pasan los 10 seg y no encontró nada tirará EXCEPCION;
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 10); //Recibe driver y los segundos de espera
     }
 
     //Constructor
@@ -42,8 +42,15 @@ public class BasePage {
     private WebElement Find(String locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
-
+    //Dado un elemento, darle click
     public void clickElement(String locator){
         Find(locator).click(); //click() la provee WebElement
     }
+    //Funcion para escribir en campos de texto
+    public void write(String locator, String textToWrite){
+        Find(locator).clear(); //Limpiar campo de texto
+        Find(locator).sendKeys(textToWrite); //Enviar algo, en este caso texto
+    }
+
+
 }

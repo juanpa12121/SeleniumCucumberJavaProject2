@@ -16,6 +16,7 @@ public class GoogleSteps {
 
     @When("^I enter a search criteria$")
     public void enterSearchCriteria(){
+        google.enterSearchCriteria("Colombia");
     }
 
     @And("^Click on the search button$")

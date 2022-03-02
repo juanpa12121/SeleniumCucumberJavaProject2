@@ -4,7 +4,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class GooglePage extends BasePage{
 
-    private String googleSearchButton = "//body/div/div/form[contains(@role,'search')]/div[contains(@jsmodel,'vWNDde')]/div[contains(@jscontroller,'cnjECf')]/div/center/input[1]";
+
+    private String searchTextField = "//input[@title='Buscar']";
+    private String googleSearchButton = "//input[@value='Buscar con Google']";//Este lo saque manualmente
 
     public GooglePage() {
         super((ChromeDriver) driver);
@@ -17,4 +19,9 @@ public class GooglePage extends BasePage{
     public void clickGoogleSearch(){
         clickElement(googleSearchButton);
     }
+
+    public void enterSearchCriteria(String criteria){
+        write(searchTextField, criteria);
+    }
+
 }
