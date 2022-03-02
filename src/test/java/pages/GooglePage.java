@@ -4,7 +4,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class GooglePage extends BasePage{
 
-
     private String searchTextField = "//input[@title='Buscar']";
     private String googleSearchButton = "//input[@value='Buscar con Google']";//Este lo saque manualmente
 

@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
@@ -42,15 +43,34 @@ public class BasePage {
     private WebElement Find(String locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
+
     //Dado un elemento, darle click
     public void clickElement(String locator){
         Find(locator).click(); //click() la provee WebElement
     }
+
     //Funcion para escribir en campos de texto
     public void write(String locator, String textToWrite){
         Find(locator).clear(); //Limpiar campo de texto
         Find(locator).sendKeys(textToWrite); //Enviar algo, en este caso texto
     }
 
+    //Funcion para dropdowns. (Izq: WebElement para encontrarlo, Der: Valor a seleccionar del dropdown)
+    public void selectFromDropdownByValue(String locator, String valueToSelect){
+        Select dropdown = new Select(Find(locator)); //Ya tenemos el dropdown
+        dropdown.selectByValue(valueToSelect);
+    }
+
+    //Funcion para dropdowns por Index (el valor debe ser entero)
+    public void selectFromDropdownByIndex(String locator, int valueToSelect){
+        Select dropdown = new Select(Find(locator)); //Ya tenemos el dropdown
+        dropdown.selectByIndex(valueToSelect);
+    }
+
+    //Funcion para dropdowns por Texto
+    public void selectFromDropdownByText(String locator, String valueToSelect){
+        Select dropdown = new Select(Find(locator)); //Ya tenemos el dropdown
+        dropdown.selectByVisibleText(valueToSelect);
+    }
 
 }

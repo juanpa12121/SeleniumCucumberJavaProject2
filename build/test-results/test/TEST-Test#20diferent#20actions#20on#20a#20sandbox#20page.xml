@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test diferent actions on a sandbox page" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-03-02T14:44:09" hostname="JUANPABLO" time="0.15">
+  <properties/>
+  <testcase name="As a Test Engineer, I try different actions on a sandboxpage" classname="Test diferent actions on a sandbox page" time="0.15">
+    <failure message="io.cucumber.junit.UndefinedStepException: The step 'I navigate to the sandbox page' is undefined.&#10;You can implement this step using the snippet(s) below:&#10;&#10;@Given(&quot;I navigate to the sandbox page&quot;)&#10;public void i_navigate_to_the_sandbox_page() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.UndefinedStepException">io.cucumber.junit.UndefinedStepException: The step 'I navigate to the sandbox page' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;I navigate to the sandbox page&quot;)
+public void i_navigate_to_the_sandbox_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
