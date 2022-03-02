@@ -16,7 +16,9 @@ public class GooglePage extends BasePage{
     }
 
     public void clickGoogleSearch(){
+
         clickElement(googleSearchButton);
+        hoverOverElement("//*[@id=\"rso\"]/div[1]/div/div/div/div[1]/a/h3");
     }
 
     public void enterSearchCriteria(String criteria){
