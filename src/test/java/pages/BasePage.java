@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.concurrent.TimeUnit;
+
 public class BasePage {
     //Static para que haya una sola instancia de webdriver compartida para todas las clases
     //protected solo se puede llamar dentro de la clase
@@ -31,6 +33,8 @@ public class BasePage {
     public BasePage(ChromeDriver driver) {
         BasePage.driver = driver;
         wait = new WebDriverWait(driver, 10);
+        //Espera implícita, espera para TODO, NO RECOMENDABLE
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     //Funcion de navegar
