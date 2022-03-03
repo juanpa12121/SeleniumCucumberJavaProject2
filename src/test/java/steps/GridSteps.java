@@ -7,7 +7,7 @@ public class GridSteps {
     GridPage grid = new GridPage();
 
     @Given("^I navigate to the static table$")
-    public void navigateToGridPage(){
+    public void navigateToGridPage() {
         grid.navigateToGrid();
     }
 
