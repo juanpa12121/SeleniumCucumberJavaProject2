@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test Google search functionality" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-02T14:43:58" hostname="JUANPABLO" time="10.216">
+<testsuite name="Test Google search functionality" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-03-02T21:18:33" hostname="JUANPABLO" time="10.505">
   <properties/>
-  <testcase name="Busco algo en Google" classname="Test Google search functionality" time="10.216"/>
+  <testcase name="Busco algo en Google" classname="Test Google search functionality" time="10.505">
+    <failure message="java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.interactions.Actions.moveToElement(org.openqa.selenium.WebElement)&quot; because &quot;pages.BasePage.action&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.interactions.Actions.moveToElement(org.openqa.selenium.WebElement)&quot; because &quot;pages.BasePage.action&quot; is null
+	at pages.BasePage.hoverOverElement(BasePage.java:79)
+	at pages.GooglePage.clickGoogleSearch(GooglePage.java:21)
+	at steps.GoogleSteps.clickSearchButton(GoogleSteps.java:24)
+	at ✽.Click on the search button(file:///D:/GitHub/SeleniumCucumberJavaProject2/src/test/resources/features/Google.feature:6)
+</failure>
+  </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 98.0.4758.102 (273bf7ac8c909cde36982d27f66f3c70846a3718-refs/branch-heads/4758@{#1151}) on port 51462
+  <system-err><![CDATA[Starting ChromeDriver 98.0.4758.102 (273bf7ac8c909cde36982d27f66f3c70846a3718-refs/branch-heads/4758@{#1151}) on port 57881
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-mar. 02, 2022 9:44:03 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+mar. 02, 2022 4:18:38 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-mar. 02, 2022 9:44:04 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+mar. 02, 2022 4:18:38 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 98, so returning the closest version found: 97
-mar. 02, 2022 9:44:04 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+mar. 02, 2022 4:18:38 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found CDP implementation for version 98 of 97
 ]]></system-err>
 </testsuite>

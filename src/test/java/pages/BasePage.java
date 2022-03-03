@@ -50,42 +50,54 @@ public class BasePage {
         Find(locator).click(); //click() la provee WebElement
     }
 
-    //Funcion para escribir en campos de texto
+    //Metodo para escribir en campos de texto
     public void write(String locator, String textToWrite){
         Find(locator).clear(); //Limpiar campo de texto
         Find(locator).sendKeys(textToWrite); //Enviar algo, en este caso texto
     }
 
-    //Funcion para dropdowns. (Izq: WebElement para encontrarlo, Der: Valor a seleccionar del dropdown)
+    //Metodo para dropdowns. (Izq: WebElement para encontrarlo, Der: Valor a seleccionar del dropdown)
     public void selectFromDropdownByValue(String locator, String valueToSelect){
         Select dropdown = new Select(Find(locator)); //Ya tenemos el dropdown
         dropdown.selectByValue(valueToSelect);
     }
 
-    //Funcion para dropdowns por Index (el valor debe ser entero)
+    //Metodo para dropdowns por Index (el valor debe ser entero)
     public void selectFromDropdownByIndex(String locator, int valueToSelect){
         Select dropdown = new Select(Find(locator)); //Ya tenemos el dropdown
         dropdown.selectByIndex(valueToSelect);
     }
 
-    //Funcion para dropdowns por Texto
+    //Metodo para dropdowns por Texto
     public void selectFromDropdownByText(String locator, String valueToSelect){
         Select dropdown = new Select(Find(locator)); //Ya tenemos el dropdown
         dropdown.selectByVisibleText(valueToSelect);
     }
 
-    //Funcion HoverOver (Pasar mouse por encima de un elemento)
+    //Metodo HoverOver (Pasar mouse por encima de un elemento)
     public void hoverOverElement(String locator){
         action.moveToElement(Find(locator));
     }
 
-    //Funcion doble click
+    //Metodo doble click
     public void doubleClick(String locator){
         action.doubleClick(Find(locator));
     }
 
-    //Funcion click derecho
+    //Metodo click derecho
     public void rightClick(String locator){
         action.contextClick(Find(locator));
+    }
+
+    //Función para devolver el valor de una celda de una tabla
+    public String getValueFromTable(String locator, int row, int column){
+        String cellINeed = locator + "/table/tbody/tr["+row+"]/td["+column+"]"; //locator es el xpath general de la tabla
+        return Find(cellINeed).getText(); //Devolver texto que tenga ese webelement
+    }
+
+    //Metodo para setear valor de una celda (no de vuelve nada porque estamos seteando)
+    public void setValueOnTable(String locator, int row, int column, String stringToSend){
+        String cellToFill = locator + "/table/tbody/tr["+row+"]/td["+column+"]";
+        Find(cellToFill).sendKeys(stringToSend);
     }
 }

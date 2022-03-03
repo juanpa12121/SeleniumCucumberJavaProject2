@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test different actions on a sandbox page" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-02T21:18:46" hostname="JUANPABLO" time="4.485">
+  <properties/>
+  <testcase name="As a Test Engineer, I try different actions on a sandbox page" classname="Test different actions on a sandbox page" time="1.21"/>
+  <testcase name="As a Test Engineer, I want to retrieve the value of a static table" classname="Test different actions on a sandbox page" time="3.275"/>
+  <system-out><![CDATA[r: 0, c: 0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
