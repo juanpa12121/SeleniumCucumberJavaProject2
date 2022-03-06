@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class BasePage {
@@ -104,4 +106,21 @@ public class BasePage {
         String cellToFill = locator + "/table/tbody/tr["+row+"]/td["+column+"]";
         Find(cellToFill).sendKeys(stringToSend);
     }
+
+    //Metodo para subida de archivos a la web
+    public void uploadFile(String locator, String path){
+        File file = new File(path);
+        String absolutePath = file.getAbsolutePath();
+        Find(locator).sendKeys(absolutePath);
+        System.out.println(absolutePath);
+    }
+
+    //Cuando el input tiene un id pero su style no es visible.
+    public void fileVisibleById(String idElement){
+        String changeVisibility = "document.getElementById('"+idElement+"').style.visibility = 'visible';";
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript(changeVisibility);
+    }
+
+
 }
