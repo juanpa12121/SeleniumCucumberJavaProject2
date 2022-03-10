@@ -1,5 +1,6 @@
 package pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -32,7 +33,7 @@ public class BasePage {
     }
 
     //Constructor
-    public BasePage(WebDriver driver) {
+    public BasePage(ChromeDriver driver) {
         BasePage.driver = driver;
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, 10);
@@ -135,6 +136,16 @@ public class BasePage {
     //Método para rechazar una alerta
     public void dismissAlert(){
         driver.switchTo().alert().dismiss();
+    }
+
+    //Método para validar texto
+    public void validateText(String locator, String textToValidate){
+        Assert.assertEquals(textToValidate, Find(locator).getText());
+    }
+
+    //Función para devolver texto de webelement
+    public String textFromElement(String locator){
+        return Find(locator).getText();
     }
 
 

@@ -1,6 +1,7 @@
 package steps;
 
 import io.cucumber.java.en.*;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import pages.GooglePage;
@@ -27,6 +28,8 @@ public class GoogleSteps {
 
     @Then("^The results match the criteria$")
     public void validateResults(){
+        Assert.assertEquals("Colombia - Wikipedia, la enciclopedia libre", google.firstResult());
+        //google.validate("Colombia - Wikipedia, la enciclopedia libre");
     }
 
 }
