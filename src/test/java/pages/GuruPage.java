@@ -16,7 +16,6 @@ public class GuruPage extends BasePage{
         rightClick("//span[@class='context-menu-one btn btn-neutral']");
         clickElement("//div[@id='context-menu-layer']"); //Click espacio en blanco
     }
-
     public void doubleClickGuruButton(){
         doubleClick("//button[normalize-space()='Double-Click Me To See Alert']");
     }
