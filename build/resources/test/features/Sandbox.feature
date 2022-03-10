@@ -5,12 +5,11 @@
       Given I navigate to the sandbox page
       And Select a value from the dropdown
 
-
+    @Test
     Scenario: As a Test Engineer, I want to retrieve the value of a static table
       Given I navigate to the static table
       Then I can return the value I wanted
 
-    @Test
     Scenario: As a Test Engineer, I want to upload a test document
       Given I navigate to the sandbox upload page
       And I upload a document
