@@ -2,6 +2,7 @@ package steps;
 
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import pages.GooglePage;
 
 // Clase para definir que haran cada step que definimos en el feature

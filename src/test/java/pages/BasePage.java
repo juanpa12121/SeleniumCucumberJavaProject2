@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -23,7 +24,7 @@ public class BasePage {
 
     //Bloque estatico donde se crea el driver 1 sola vez para todas las demas instancias
     static {
-        System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_98.0.4758.102\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D:\\chromedriver\\chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver(chromeOptions);
         //Se crea una espera(Wait) ya que al usar este objeto tendra espera de 10 seg
@@ -34,6 +35,7 @@ public class BasePage {
     //Constructor
     public BasePage(ChromeDriver driver) {
         BasePage.driver = driver;
+        PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, 10);
         //Espera implícita, espera para TODO, NO RECOMENDABLE
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -120,6 +122,19 @@ public class BasePage {
         String changeVisibility = "document.getElementById('"+idElement+"').style.visibility = 'visible';";
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript(changeVisibility);
+    }
+
+    //Método para escuchar un iFrame
+    public void switchToiFrame(String iFrameIndex){
+        driver.switchTo().frame(iFrameIndex);
+    }
+
+    public void switchToParentFrame(){
+        driver.switchTo().parentFrame();
+    }
+
+    public void dismissAlert(){
+        driver.switchTo().alert().dismiss();
     }
 
 

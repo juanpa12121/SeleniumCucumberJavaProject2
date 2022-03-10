@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class GuruPage extends BasePage{
 
     public GuruPage() {
-        super((ChromeDriver) driver);
+        super(driver);
     }
 
     public void navigateToGuruSite(){
