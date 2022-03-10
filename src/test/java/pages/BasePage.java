@@ -13,7 +13,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
-import java.util.concurrent.TimeUnit;
 
 public class BasePage {
     //Static para que haya una sola instancia de webdriver compartida para todas las clases
@@ -33,7 +32,7 @@ public class BasePage {
     }
 
     //Constructor
-    public BasePage(ChromeDriver driver) {
+    public BasePage(WebDriver driver) {
         BasePage.driver = driver;
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, 10);
@@ -133,6 +132,7 @@ public class BasePage {
         driver.switchTo().parentFrame();
     }
 
+    //Método para rechazar una alerta
     public void dismissAlert(){
         driver.switchTo().alert().dismiss();
     }
