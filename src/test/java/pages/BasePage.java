@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
+import java.util.List;
 
 public class BasePage {
     //Static para que haya una sola instancia de webdriver compartida para todas las clases
@@ -33,7 +34,7 @@ public class BasePage {
     }
 
     //Constructor
-    public BasePage(ChromeDriver driver) {
+    public BasePage(WebDriver driver) {
         BasePage.driver = driver;
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, 10);
@@ -159,6 +160,13 @@ public class BasePage {
     //Verifica que un elemento como por ejemplo un dropdown o un checkbox esté seleccionado.
     public boolean elementIsSelected(String locator){
         return Find(locator).isSelected();
+    }
+
+    //Función de tipo Lista y esta tendra objetos de tipo WebElement
+    //Retorna los webelements
+    //findElements retorna varios webelements, diferente a findElement
+    public List<WebElement> bringAllElements (String locator){
+        return driver.findElements(By.className(locator));
     }
 
 

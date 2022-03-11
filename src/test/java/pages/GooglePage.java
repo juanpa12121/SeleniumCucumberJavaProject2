@@ -9,7 +9,7 @@ public class GooglePage extends BasePage{
     private String firstResult = "//h3[normalize-space()='Colombia - Wikipedia, la enciclopedia libre']";
 
     public GooglePage() {
-        super((ChromeDriver) driver);
+        super(driver);
     }
 
     public void navigateToGoogle(){
