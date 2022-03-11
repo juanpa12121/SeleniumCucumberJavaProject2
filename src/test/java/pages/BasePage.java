@@ -1,10 +1,7 @@
 package pages;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
@@ -136,7 +133,11 @@ public class BasePage {
 
     //Método para rechazar una alerta
     public void dismissAlert(){
-        driver.switchTo().alert().dismiss();
+        try {
+            driver.switchTo().alert().dismiss();
+        }catch (NoAlertPresentException e){
+            System.out.println("La alerta no está presente: "+e);
+        }
     }
 
     //Método para validar texto
