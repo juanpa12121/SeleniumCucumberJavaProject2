@@ -148,5 +148,18 @@ public class BasePage {
         return Find(locator).getText();
     }
 
+    //Funcion para ver si un elemento esta siendo mostrado
+    public boolean elementIsDisplayed(String locator){
+        return Find(locator).isDisplayed();
+    }
+    //Funcion para verificar que un botón esté habilitado para ser clickeado.
+    public boolean elementIsEnabled(String locator){
+        return Find(locator).isEnabled();
+    }
+    //Verifica que un elemento como por ejemplo un dropdown o un checkbox esté seleccionado.
+    public boolean elementIsSelected(String locator){
+        return Find(locator).isSelected();
+    }
+
 
 }

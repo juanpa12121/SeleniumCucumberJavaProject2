@@ -19,4 +19,10 @@ public class GridSteps {
 
         Assert.assertEquals("r: 2, c: 1", value);
     }
+
+    @Then("^I can validate the table is displayed$")
+    public void validateTableIsDisplayed(){
+        Assert.assertFalse("El elemento esta siendo mostrado. CORREGIR", grid.cellStatus());
+    }
+
 }
