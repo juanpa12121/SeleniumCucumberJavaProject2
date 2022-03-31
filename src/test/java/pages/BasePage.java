@@ -44,6 +44,11 @@ public class BasePage {
         driver.get(url);
     }
 
+    //Método para cerrar la instancia de Chrome
+    public static void closeBrowser(){
+        driver.quit();
+    }
+
     //Private: Solo se usará en esta clase
     //Manera única del profesor (instanciar una sola vez)
     //Metodo que devolverá un webelement
