@@ -1,6 +1,8 @@
 @Test
 Feature: Test different actions on the Static Table Page
 
+  Rule: The user can return values from the table and validate them.
+
   Background: Navigate to Table web app
   Given I navigate to the static table
 
