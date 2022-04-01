@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test different actions on the Static Table Page" tests="2" skipped="0" failures="1" errors="0" timestamp="2022-03-31T23:19:58" hostname="JUANPABLO" time="5.556">
+  <properties/>
+  <testcase name="As a Test Engineer, I want to retrieve the value of a static table" classname="Test different actions on the Static Table Page" time="3.413"/>
+  <testcase name="As a Test Engineer, I want to validate the static table is displayed." classname="Test different actions on the Static Table Page" time="2.143">
+    <failure message="java.lang.AssertionError: El elemento esta siendo mostrado. CORREGIR" type="java.lang.AssertionError">java.lang.AssertionError: El elemento esta siendo mostrado. CORREGIR
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at steps.GridSteps.validateTableIsDisplayed(GridSteps.java:25)
+	at ✽.I can validate the table is displayed(file:///D:/GitHub/SeleniumCucumberJavaProject2/src/test/resources/features/StaticTable.feature:12)
+</failure>
+  </testcase>
+  <system-out><![CDATA[r: 2, c: 1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
