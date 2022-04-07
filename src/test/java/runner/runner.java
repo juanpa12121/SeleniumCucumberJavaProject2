@@ -10,7 +10,7 @@ import pages.BasePage;
 @CucumberOptions(
     features = "src/test/resources/features", //Indicar donde estan los features
         glue = "steps", //Donde estan las definiciones de los steps
-        tags = "@Test"
+        tags = "@Table"
 )
 
 public class runner {

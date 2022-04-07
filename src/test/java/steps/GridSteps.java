@@ -21,7 +21,7 @@ public class GridSteps {
 
     @Then("^I can validate the table is displayed$")
     public void validateTableIsDisplayed(){
-        Assert.assertFalse("El elemento esta siendo mostrado. CORREGIR", grid.cellStatus());
+        Assert.assertTrue("El elemento esta siendo mostrado. CORREGIR", grid.cellStatus());
     }
 
 }
