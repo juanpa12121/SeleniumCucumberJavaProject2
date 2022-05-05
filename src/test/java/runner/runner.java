@@ -9,7 +9,8 @@ import pages.BasePage;
 @RunWith(Cucumber.class)
 @CucumberOptions(
     features = "src/test/resources/features", //Indicar donde estan los features
-        glue = "steps", //Donde estan las definiciones de los steps
+        glue = "steps", //Donde estan las definiciones de los steps,
+        monochrome = true,
         tags = "@Table"
 )
 

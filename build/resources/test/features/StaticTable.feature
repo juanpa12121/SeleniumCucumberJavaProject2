@@ -10,7 +10,7 @@ Feature: Test different actions on the Static Table Page
   Scenario: As a Test Engineer, I want to retrieve the value of a static table
     Then I can return the value I wanted
 
-  @Regression
+  @A
   #Creo un Scenario para verificar si la tabla está ahí
   Scenario: As a Test Engineer, I want to validate the static table is displayed.
     Then I can validate the table is displayed
