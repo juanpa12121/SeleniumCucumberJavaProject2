@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test different actions on the Static Table Page" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-05-05T18:54:58" hostname="JUAN-PC" time="9.403">
+<testsuite name="Test different actions on the Static Table Page" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-07-06T17:40:10" hostname="JUANPABLOPC" time="19.012">
   <properties/>
-  <testcase name="As a Test Engineer, I want to retrieve the value of a static table" classname="Test different actions on the Static Table Page" time="6.683"/>
-  <testcase name="As a Test Engineer, I want to validate the static table is displayed." classname="Test different actions on the Static Table Page" time="2.72"/>
+  <testcase name="As a Test Engineer, I want to retrieve the value of a static table" classname="Test different actions on the Static Table Page" time="14.891"/>
+  <testcase name="As a Test Engineer, I want to validate the static table is displayed." classname="Test different actions on the Static Table Page" time="4.121"/>
   <system-out><![CDATA[r: 2, c: 1
 ]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 101.0.4951.41 (93c720db8323b3ec10d056025ab95c23a31997c9-refs/branch-heads/4951@{#904}) on port 57693
+  <system-err><![CDATA[Starting ChromeDriver 102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}) on port 54417
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-may. 05, 2022 1:55:01 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+[1657129215.367][WARNING]: This version of ChromeDriver has not been tested with Chrome version 103.
+jul. 06, 2022 12:40:17 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-may. 05, 2022 1:55:01 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 101, so returning the closest version found: 97
-may. 05, 2022 1:55:01 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-INFO: Found CDP implementation for version 101 of 97
+jul. 06, 2022 12:40:17 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 103, so returning the closest version found: a no-op implementation
+jul. 06, 2022 12:40:17 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 103.
+jul. 06, 2022 12:40:17 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.2` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>
