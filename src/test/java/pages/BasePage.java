@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
+import java.time.Duration;
 import java.util.List;
 
 public class BasePage {
@@ -27,14 +28,14 @@ public class BasePage {
         driver = new ChromeDriver(chromeOptions);
         //Se crea una espera(Wait) ya que al usar este objeto tendra espera de 10 seg
         //Ya que si pasan los 10 seg y no encontró nada tirará EXCEPCION;
-        wait = new WebDriverWait(driver, 10); //Recibe driver y los segundos de espera
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10)); //Recibe driver y los segundos de espera
     }
 
     //Constructor
     public BasePage(WebDriver driver) {
         BasePage.driver = driver;
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         //Espera implícita, espera para TODO, NO RECOMENDABLE
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }

@@ -6,7 +6,7 @@ group 'CursoUdemy'
 version '1.0-SNAPSHOT'
 
 //Poner version anterior al JDK instalado
-sourceCompatibility = 16
+sourceCompatibility = 8
 
 //Indicar de que repositorios traeremos las dependencias
 repositories {
@@ -15,20 +15,19 @@ repositories {
 
 dependencies {
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.1.2'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.5.0'
 
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
-    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.3.3'
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.8.1'
 
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
-    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.3.3'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.8.1'
 
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
-    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.36'
+    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.3'
 
     // https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter
     implementation group: 'tech.grasshopper', name: 'extentreports-cucumber7-adapter', version: '1.7.0'
-
 }
 
 test{

@@ -18,6 +18,6 @@ public class SandBoxUploadPage extends BasePage{
 
     public void uploadF(){
         //fileVisibleById("uploadPicture");
-        uploadFile(buttonUpload, "D:\\Prueba.txt");
+        uploadFile(buttonUpload, "D:\\chromedriver\\Prueba.txt");
     }
 }
